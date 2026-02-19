@@ -49,9 +49,15 @@ import UseIdhook from './Useidhook'
 
 
 
-let Guest=0
+let guest=0
 function App() {
   const[User,Setuser]=useState('');
+  const Gueste=()=>{
+   guest=guest+1;
+  return (
+    <h1> we have {guest} guest we need {guest} cup of tea.</h1>
+     );
+    }
 
   function ShowName() {
    
@@ -76,7 +82,7 @@ function App() {
       <h1>Vite + React</h1>
       
 
-      {/* <Eventfunction></Eventfunction>
+      <Eventfunction></Eventfunction>
       <City></City>
       <Compo></Compo>
       <Wilde></Wilde>
@@ -116,13 +122,13 @@ function App() {
       <Child1 Setuser={Setuser}/>
       <Child2 User={User}/>
       <ObjectState/>
-      <Actionststes /> */}
+      <Actionststes />
       <Useidhook/>
       <hr />
       <UseIdhook/>
        <hr />
        <UseIdhook/>
-      {/* <div 
+      <div 
       className="card"
       >
         <button onClick={() => SetCount((count) => count + 1)}>
@@ -131,18 +137,13 @@ function App() {
         <p>
           Created by Awais Azam
         </p>
-      </div> */}
-      {/* <p className="read-the-docs">
+      </div>
+      <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p> */}
+      </p>
     </>
   )
 }
-// const Gueste=()=>{
-//   Guest=Guest+1;
-//   return (
-//     <h1> we have {Guest} guest we need {Guest} cup of tea.</h1>
-//      );
-//     }
+
    
 export default App
